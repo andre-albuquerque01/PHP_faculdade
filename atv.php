@@ -96,5 +96,5 @@ for ($e = 0; $e < $awl; $e++) {
         $als += $al[$e];
     }
 }
-echo "Soma é de " . $als . "<br>";
-echo "Soma é de " . array_sum($al) . "<br>";
+echo "Soma é de " . $als . "<br>, apenas com os numeros inteiros do array.";
+echo "Soma é de " . array_sum($al) . "<br>, soma com todos os numero.";
