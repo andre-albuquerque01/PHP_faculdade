@@ -72,11 +72,11 @@ function buscaTexto($texto, $busca)
     $arr = array_push($arry, $busca);
     foreach ($arry as $ai) {
         $alo = "<span style='color: #f00;'>$ai</span>";
-        $pos = strstr($texto, $ai);
-        echo "$alo $pos";
+        $pos = str_replace($busca, $alo, $texto);
+        echo "$pos";
     }
 }
-buscaTexto("Andre al a nde", "Andre");
+buscaTexto("O mundo precisa de mais dinheiro", "mundo");
 
 echo "<hr>";
 
