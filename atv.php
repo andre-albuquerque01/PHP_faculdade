@@ -1,10 +1,14 @@
 <?php
 echo "A)<br>";
-$n = 2;
-for ($i = 0; $i <= 10; $i++) {
-    $r = $n * $i;
-    echo $n . " x " . $i . " = $r<br>";
+function tabuada($n)
+{
+    for ($i = 0; $i <= 10; $i++) {
+        $r = $n * $i;
+        echo $n . " x " . $i . " = $r<br>";
+    }
 }
+tabuada(2);
+
 echo "<hr>";
 
 echo "B)<br>";
@@ -33,22 +37,25 @@ echo $r;
 echo "<hr>";
 
 echo "D)<br>";
-$cpf = "02586123456";
-$u = strlen($cpf);
-if ($u >= 11) {
-    $o = mb_substr($cpf, 0, 3) . "." .
-        mb_substr($cpf, 3, 3) . "." .
-        mb_substr($cpf, 6, 3) . "-" .
-        mb_substr($cpf, 9, 2);
-    echo $o;
-} else {
-    $st = str_pad($cpf, 11, "0", STR_PAD_RIGHT) . "<br>";
-    $trq = mb_substr($st, 0, 3) . "." .
-        mb_substr($st, 3, 3) . "." .
-        mb_substr($st, 6, 3) . "-" .
-        mb_substr($st, 9, 2);
-    echo $trq;
+function cpf($cpf)
+{
+    $u = strlen($cpf);
+    if ($u >= 11) {
+        $o = mb_substr($cpf, 0, 3) . "." .
+            mb_substr($cpf, 3, 3) . "." .
+            mb_substr($cpf, 6, 3) . "-" .
+            mb_substr($cpf, 9, 2);
+        echo $o;
+    } else {
+        $st = str_pad($cpf, 11, "0", STR_PAD_RIGHT) . "<br>";
+        $trq = mb_substr($st, 0, 3) . "." .
+            mb_substr($st, 3, 3) . "." .
+            mb_substr($st, 6, 3) . "-" .
+            mb_substr($st, 9, 2);
+        echo $trq;
+    }
 }
+cpf(12345678911);
 
 echo "<hr>";
 
