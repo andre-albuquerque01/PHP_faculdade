@@ -79,7 +79,7 @@ function buscaTexto($texto, $busca)
     $arr = array_push($arry, $busca);
     foreach ($arry as $ai) {
         $alo = "<span style='color: #f00;'>$ai</span>";
-        $pos = str_replace($busca, $alo, $texto);
+        $pos = str_replace($ai, $alo, $texto);
         echo "$pos";
     }
 }
@@ -97,4 +97,4 @@ for ($e = 0; $e < $awl; $e++) {
     }
 }
 echo "Soma é de " . $als . "<br>, apenas com os numeros inteiros do array.";
-echo "Soma é de " . array_sum($al) . "<br>, soma com todos os numero.";
+echo "Soma é de " . array_sum($al) . "<br>, soma com todos os numero do array.";
