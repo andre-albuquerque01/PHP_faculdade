@@ -2,4 +2,4 @@
 Atividade para a disciplina linguagem técnica de programação
 
 Integrantes do grupo:
-André Albuquerque Gonçave.
+André Albuquerque Gonçalves.
