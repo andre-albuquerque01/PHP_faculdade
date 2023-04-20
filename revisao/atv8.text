@@ -1,0 +1,13 @@
+8. Considere o código abaixo:
+$conn = new PDO('mysql:host=localhost;dbname=cdcol', "root", "");
+$stmt = $conn->prepare('INSERT INTO cds (titel,interpret,jahr,gravadora)
+VALUES(:titel,:interpret,:jahr,:gravadora);');
+$stmt->bindParam(':titel', $titel, PDO::PARAM_STR);
+$stmt->bindParam(':interpret', $interpret, PDO::PARAM_STR);
+$stmt->bindParam(':gravadora', $gravadora, PDO::PARAM_STR);
+$stmt->bindParam(':jahr', $jahr, PDO::PARAM_INT);
+$stmt->execute();
+Complete as frases abaixo escolhendo a palavra correta.
+Podemos dizer que "$conn" ($conn/PDO) é um objeto da "PDO" ($conn/PDO).
+Prepare() é um "método" (método/atributo) do objeto $conn.
+bindParam() e execute() são "métodos" (métodos/atributos).
