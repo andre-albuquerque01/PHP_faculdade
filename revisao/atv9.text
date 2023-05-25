@@ -1,0 +1,13 @@
+9. Um conceito importante na programação orientada a objetos é o encapsulamento.
+Relacionado ao encapsulamento podemos afirmar que:
+I. O encapsulamento é implementado através da definição da visibilidade dos atributos e métodos como privados, protegidos ou públicos.
+II. De acordo com esse conceito, é uma boa prática, que os atributos sejam ou protegidos e os métodos tenham visibilidade pública.
+III. Métodos ou atributos declarados como público podem ser acessados diretamente nos programas onde os objetos que os contém forem instanciados.
+IV. Métodos ou atributos privados são acessíveis dentro da própria classe onde foram definidos ou em subclasses dessa classe.
+V. Métodos ou atributos protegidos são acessíveis apenas dentro da própria classe onde foram definidos.
+São verdadeiras as afirmações:
+a) I, II e III.
+-- b) II, III e IV.
+c) III, IV e V.
+d) I, III e V.
+e) II, IV e V.
