@@ -1,0 +1,10 @@
+6. No PHP podemos definir um vetor da seguinte maneira:
+$nome = ['Mateus', 'Marcos', 'Lucas', 'João'];
+Outra forma de definir o mesmo vetor é:
+a) ( ) $nome = array('Mateus', 'Marcos', 'Lucas', 'João');
+b) ( ) $nome = array(0=>'Mateus', 1=>'Marcos', 2=>'Lucas', 3=>'João');
+c) ( ) $nome[0] => 'Mateus';
+ $nome[1] => 'Marcos';
+ $nome[2] => 'Lucas';
+ $nome[3] => 'João';
+d) (x) Todas anteriores

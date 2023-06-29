@@ -1,0 +1,11 @@
+POST - Os dados do formulário não aparecem na URL
+GET - Os dados do formulário aparecem na URL
+POST - Não tem limite de quantidade de dados que pode transferir do
+navegador para o servidor
+GET - Tem limite de quantidade de dados que pode transferir do
+navegador para o servidor. Cerca de 2000 bytes
+METHOD - Nome do atributo da tag <form> usado para indicar o nome do
+programa que irá receber os dados do formulário
+ACTION - Nome do atribuito da tag <form> usado para indicar a forma que
+dos dados do formulário serão transferidos do navegador para o
+servidor
