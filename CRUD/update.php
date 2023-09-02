@@ -14,9 +14,8 @@
     <?php
     include "crud.php";
     include_once "conexao.php";
-    $id = $_GET['id'];
-    $stm = $pdo->query("SELECT * FROM `contatos` WHERE ID = $id");
-    while($ind = $stm->fetch()){
+    $up = $cont->SelectOne($_GET['id']);
+    while ($ind = $up->fetch()) {
         $nome = $ind['NOME'];
         $email = $ind['EMAIL'];
         $telefone = $ind['TELEFONE'];
@@ -26,15 +25,15 @@
         <form method="POST">
             <div class="nome">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control" value="<?= $nome ?>" required>
+                <input type="text" name="nome" id="nome" class="form-control" value="<?= $nome ?>" maxlength="90" required>
             </div>
             <div class="Email mt-3">
                 <label for="Email">Email</label>
-                <input type="email" name="email" class="form-control" id="Email" value="<?= $email ?>" required>
+                <input type="email" name="email" class="form-control" id="Email" value="<?= $email ?>" maxlength="90" required>
             </div>
             <div class="Telefone mt-3">
                 <label for="Telefone">Telefone</label>
-                <input type="number" name="telefone" id="Telefone" class="form-control" value="<?= $telefone ?>" required>
+                <input type="number" name="telefone" id="Telefone" class="form-control" value="<?= $telefone ?>" max="999999999999" required>
             </div>
             <div class="col-auto mt-3">
                 <button class="btn btn-primary">Enviar</button>
@@ -43,11 +42,8 @@
     </div>
 </body>
 <?php
-$nome = $_POST['nome'];
-$email = $_POST['email'];
-$telefone = $_POST['telefone'];
-if (isset($id) && isset($nome) && isset($email)) :
-    $cont->update($id, $nome, $email, $telefone);
+if (isset($_GET['id']) && isset($_POST['nome']) && isset($_POST['email'])) :
+    $cont->update($_GET['id'], $_POST['nome'],  $_POST['email'], $_POST['telefone']);
 endif;
 ?>
 

@@ -20,24 +20,29 @@
                 <td scope="col">#</td>
                 <td scope="col">#</td>
             </tr>
-            
-                <?php
-                include "crud.php";
-                $st = $cont->SelectAll();
-                while ($ind = $st->fetch()) {
-                    $id = ($ind['ID']);
-                    echo "<tr>";
-                    echo "<td>" . ($ind['NOME']) . "</td>";
-                    echo "<td>" . ($ind['EMAIL']) . "</td>";
-                    echo "<td>" . ($ind['TELEFONE']) . "</td>";
-                    echo "<td><a href='update.php?id=$id'>Alterar</a></td>";
-                    echo "<td><a href='delete.php?id=$id'>Excluir</a></td>";
-                    echo "</tr>";
-                }
-                ?>
+
+            <?php
+            include "crud.php";
+            $st = $cont->SelectAll();
+            while ($ind = $st->fetch()) {
+                $id = ($ind['ID']);
+                echo "<tr>";
+                echo "<td>" . ($ind['NOME']) . "</td>";
+                echo "<td>" . ($ind['EMAIL']) . "</td>";
+                echo "<td>" . ($ind['TELEFONE']) . "</td>";
+                echo "<td><a href='update.php?id=$id'>Alterar</a></td>";
+                echo "<td><a href='?id=$id'>Excluir</a></td>";
+                echo "</tr>";
+            }
+            ?>
         </table>
         <a href="insert.php">Inserir</a>
     </div>
 </body>
+<?php
+if (isset($_GET['id'])) :
+    $cont->Delete($_GET['id']);
+endif;
+?>
 
 </html>

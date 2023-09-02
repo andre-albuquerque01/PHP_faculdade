@@ -15,15 +15,15 @@
         <form method="get">
             <div class="nome">
                 <label for="nome">Nome</label>
-                <input type="text" name="nome" id="nome" class="form-control">
+                <input type="text" name="nome" id="nome" class="form-control" maxlength="90">
             </div>
             <div class="Email">
                 <label for="Email">Email</label>
-                <input type="email" name="email" id="Email" class="form-control">
+                <input type="email" name="email" id="Email" class="form-control" maxlength="90">
             </div>
             <div class="Telefone">
                 <label for="Telefone">Telefone</label>
-                <input type="number" name="telefone" id="Telefone" class="form-control">
+                <input type="number" name="telefone" id="Telefone" class="form-control" max="999999999999">
             </div>
             <div class="col-auto mt-3">
                 <button class="btn btn-primary">Enviar</button>
