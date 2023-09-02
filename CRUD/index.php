@@ -12,6 +12,10 @@
 
 <body>
     <div class="container">
+        <div style="display: flex; justify-content: space-between; margin: 15px 0;">
+            <h3>Lista de contato</h3>
+            <a href="insert.php">Inserir</a>
+        </div>
         <table class="table">
             <tr>
                 <td scope="col">Nome</td>
@@ -36,7 +40,6 @@
             }
             ?>
         </table>
-        <a href="insert.php">Inserir</a>
     </div>
 </body>
 <?php
