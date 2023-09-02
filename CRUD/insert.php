@@ -12,16 +12,17 @@
 
 <body>
     <div class="container mt-5">
-        <form method="get">
-            <div class="nome">
+        <h3>Cadastro do contato</h3>
+        <form method="POST">
+            <div class="mt-3">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control" maxlength="90">
             </div>
-            <div class="Email">
+            <div class="mt-3">
                 <label for="Email">Email</label>
                 <input type="email" name="email" id="Email" class="form-control" maxlength="90">
             </div>
-            <div class="Telefone">
+            <div class="mt-3">
                 <label for="Telefone">Telefone</label>
                 <input type="number" name="telefone" id="Telefone" class="form-control" max="999999999999">
             </div>
@@ -33,8 +34,8 @@
 </body>
 <?php
 include "crud.php";
-if (isset($_GET['nome']) && isset($_GET['email']) && isset($_GET['telefone'])) :
-    $cont->Insert($_GET['nome'], $_GET['email'], $_GET['telefone']);
+if (isset($_POST['nome']) && isset($_POST['email']) && isset($_POST['telefone'])) :
+    $cont->Insert($_POST['nome'], $_POST['email'], $_POST['telefone']);
 endif;
 ?>
 

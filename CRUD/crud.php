@@ -15,7 +15,8 @@ class Crud
             $sql = "DELETE FROM $this->tabela WHERE id = $id";
             $stm = $this->pdo->query($sql);
             if ($stm == true) :
-                header("location: index.php");
+                echo "<script>alert('Contato excluído');</script>";
+                echo "<script>location.href = 'index.php'</script>";
             endif;
         } catch (Exception $e) {
             echo "<script>alert('Erro ao excluir');</script>";
@@ -31,8 +32,8 @@ class Crud
             $stm->bindValue(":telefone", $telefone);
             $stm->execute();
             if ($stm == true) :
-                header("location: index.php");
-                echo "Sucesso";
+                echo "<script>alert('Cadastrado com sucesso');</script>";
+                echo "<script>location.href = 'index.php'</script>";
             endif;
         } catch (Exception $e) {
             echo "<script>alert('Erro ao inserir');</script>";
@@ -67,7 +68,8 @@ class Crud
             $stm->bindValue(":telefone", $telefone);
             $stm->execute();
             if ($stm == true) :
-                header("location: index.php");
+                echo "<script>alert('Atualizado com sucesso');</script>";
+                echo "<script>location.href = 'index.php'</script>";
             endif;
         } catch (Exception $e) {
             echo "<script>alert('Erro ao alterar');</script>";

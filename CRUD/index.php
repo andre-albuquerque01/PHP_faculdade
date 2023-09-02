@@ -14,7 +14,7 @@
     <div class="container">
         <div style="display: flex; justify-content: space-between; margin: 15px 0;">
             <h3>Lista de contato</h3>
-            <a href="insert.php">Inserir</a>
+            <a href="insert.php">Inserir contato</a>
         </div>
         <table class="table">
             <tr>

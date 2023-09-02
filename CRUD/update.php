@@ -22,16 +22,17 @@
     }
     ?>
     <div class="container mt-5">
+        <h3>Alterar o contato</h3>
         <form method="POST">
-            <div class="nome">
+            <div class="mt-3">
                 <label for="nome">Nome</label>
                 <input type="text" name="nome" id="nome" class="form-control" value="<?= $nome ?>" maxlength="90" required>
             </div>
-            <div class="Email mt-3">
+            <div class="mt-3">
                 <label for="Email">Email</label>
                 <input type="email" name="email" class="form-control" id="Email" value="<?= $email ?>" maxlength="90" required>
             </div>
-            <div class="Telefone mt-3">
+            <div class="mt-3">
                 <label for="Telefone">Telefone</label>
                 <input type="number" name="telefone" id="Telefone" class="form-control" value="<?= $telefone ?>" max="999999999999" required>
             </div>
