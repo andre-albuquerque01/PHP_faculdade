@@ -18,7 +18,7 @@ class Crud
                 header("location: index.php");
             endif;
         } catch (Exception $e) {
-            echo "Erro ao apagar";
+            echo "<script>alert('Erro ao excluir');</script>";
         }
     }
     public function Insert($nome, $email, $telefone)
@@ -35,7 +35,7 @@ class Crud
                 echo "Sucesso";
             endif;
         } catch (Exception $e) {
-            echo "Erro ao inserir";
+            echo "<script>alert('Erro ao inserir');</script>";
         }
     }
     public function SelectAll()
@@ -44,7 +44,7 @@ class Crud
             $stm = $this->pdo->query("SELECT * FROM $this->tabela");
             return $stm;
         } catch (Exception $e) {
-            echo "Erro ao mostrar";
+            echo "<script>alert('Erro ao mostrar');</script>";
         }
     }
     public function SelectOne($id)
@@ -53,7 +53,7 @@ class Crud
             $stm = $this->pdo->query("SELECT * FROM $this->tabela WHERE ID = $id");
             return $stm;
         } catch (Exception $e) {
-            echo "Erro ao mostrar";
+            echo "<script>alert('Erro ao mostrar');</script>";
         }
     }
 
@@ -70,7 +70,7 @@ class Crud
                 header("location: index.php");
             endif;
         } catch (Exception $e) {
-            echo "Erro ao alterar";
+            echo "<script>alert('Erro ao alterar');</script>";
         }
     }
 }
